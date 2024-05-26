@@ -1,0 +1,16 @@
+print("Welcome to the datorium bank!")
+my_balance = 0
+
+while True:
+  try:
+    my_deposit = input("Please enter the amount you want to deposit: ")
+    my_balance += int(my_deposit)
+    bank_operation = input("Do you want to make another deposit? If you want to exit, enter 'EXIT'. If you want to continue, press Enter key.")
+
+    if bank_operation == "EXIT":
+      print(f'Your total amount deposited is {my_balance}.')
+      print("Thank you for using our bank. Bye!")
+      break
+
+  except:
+    print("Please enter only numbers.")
